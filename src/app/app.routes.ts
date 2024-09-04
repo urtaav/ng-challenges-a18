@@ -36,15 +36,19 @@ export const routes: Routes = [
         path: 'router-input',
         loadComponent: () => import('./feature/router-input/pages/home/home.component').then((c) => c.HomeComponent),
         children: [
-          {
-            path: 'test/:testId',
-            loadComponent: () => import('./feature/router-input/pages/test/test.component').then((c) => c.TestComponent),
-            data: {
-              permission: 'admin',
+            {
+                path: 'test/:testId',
+                loadComponent: () => import('./feature/router-input/pages/test/test.component').then((c) => c.TestComponent),
+                data: {
+                    permission: 'admin',
+                },
             },
-          },
         ],
-      },
+    },
+    {
+        path: 'simple-animation',
+        loadComponent: () => import('./feature/simple-animation/pages/home/home.component').then((c) => c.HomeComponent),
+    },
     {
         path: '**',
         redirectTo: '/welcome'
