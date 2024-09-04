@@ -1,0 +1,14 @@
+<ul class="list-disc pl-5 mb-4">
+    <!-- bad practice -->
+    @for (person of persons(); track $index) {
+        <li>
+            {{ heavyComputation(person, $index) }}
+        </li>
+    }
+    <!-- good practice -->
+    @for (person of persons(); track $index) {
+        <li>
+            {{ person | comput: $index }}
+        </li>
+    }
+  </ul>
