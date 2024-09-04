@@ -50,6 +50,10 @@ export const routes: Routes = [
         loadComponent: () => import('./feature/simple-animation/pages/home/home.component').then((c) => c.HomeComponent),
     },
     {
+        path: 'lazyload-component',
+        loadComponent: () => import('./feature/lazyload-component/pages/home/home.component').then((c) => c.HomeComponent),
+    },
+    {
         path: '**',
         redirectTo: '/welcome'
     }
