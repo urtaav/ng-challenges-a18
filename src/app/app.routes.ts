@@ -54,6 +54,10 @@ export const routes: Routes = [
         loadComponent: () => import('./feature/lazyload-component/pages/home/home.component').then((c) => c.HomeComponent),
     },
     {
+        path: 'directive-enhancement',
+        loadComponent: () => import('./feature/directive-enhancement/pages/home/home.component').then((c) => c.HomeComponent),
+    },
+    {
         path: '**',
         redirectTo: '/welcome'
     }
