@@ -62,6 +62,10 @@ export const routes: Routes = [
         loadChildren: () => import('./feature/directive-permissions/directive.routes'),
     },
     {
+        path:'styling',
+        loadChildren: () => import('./feature/styling/styling.routes'),
+    },
+    {
         path: '**',
         redirectTo: '/welcome'
     }
