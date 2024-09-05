@@ -58,6 +58,10 @@ export const routes: Routes = [
         loadComponent: () => import('./feature/directive-enhancement/pages/home/home.component').then((c) => c.HomeComponent),
     },
     {
+        path:'directive-role',
+        loadChildren: () => import('./feature/directive-permissions/directive.routes'),
+    },
+    {
         path: '**',
         redirectTo: '/welcome'
     }
