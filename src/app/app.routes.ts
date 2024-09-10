@@ -58,16 +58,21 @@ export const routes: Routes = [
         loadComponent: () => import('./feature/directive-enhancement/pages/home/home.component').then((c) => c.HomeComponent),
     },
     {
-        path:'directive-role',
+        path: 'directive-role',
         loadChildren: () => import('./feature/directive-permissions/directive.routes'),
     },
     {
-        path:'styling',
+        path: 'styling',
         loadChildren: () => import('./feature/styling/styling.routes'),
     },
     {
-        path:'injection-token',
+        path: 'injection-token',
         loadChildren: () => import('./feature/injection-token/injectionToken.routes')
+    },
+    {
+        path: 'back-button-navigation',
+        loadComponent: () => import('./feature/back-button-navigation/pages/back-button-home/back-button-home.component').then((c) => c.BackButtonHomeComponent),
+        loadChildren: () => import('./feature/back-button-navigation/backButton.routes')
     },
     {
         path: '**',
