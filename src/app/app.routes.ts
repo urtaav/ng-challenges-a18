@@ -75,6 +75,10 @@ export const routes: Routes = [
         loadChildren: () => import('./feature/back-button-navigation/backButton.routes')
     },
     {
+        path:'control-value-accesor',
+        loadComponent: () => import('./feature/control-value-accesor/pages/home/home.component').then((c) => c.HomeComponent)
+    },
+    {
         path: '**',
         redirectTo: '/welcome'
     }
