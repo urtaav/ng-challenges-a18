@@ -66,6 +66,10 @@ export const routes: Routes = [
         loadChildren: () => import('./feature/styling/styling.routes'),
     },
     {
+        path:'injection-token',
+        loadChildren: () => import('./feature/injection-token/injectionToken.routes')
+    },
+    {
         path: '**',
         redirectTo: '/welcome'
     }
